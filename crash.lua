@@ -79,7 +79,7 @@ while task.wait() do -- poppy is so hot ;)
             game:GetService("CoreGui").RobloxGui.Backpack.Visible = false
             for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
                 if v:IsA("Tool") and v.Name == "[SprayCan]" then
-                    XD = XD + 1
+                    trolling = trolling + 1
                     v.Handle.Transparency = 100
                     v.Handle.Velocity = Vector3.new(math.huge, math.huge, math.huge)
                     v.Parent = game.Players.LocalPlayer.Character
