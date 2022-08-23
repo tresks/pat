@@ -70,11 +70,14 @@ CrashButton.MouseButton1Click:Connect(function()
     print(_G.sexycrash)
 end)
 trolling = 0
+local groups = game:GetService("GroupService"):GetGroupsAsync(game:GetService("Players").LocalPlayer.UserId)
+for _, groupinfo in pairs(groups) do
+    groupid = groupinfo.Id
+end
 while task.wait() do -- poppy is so hot ;)
     if _G.sexycrash then
         for i = 1,2 do
-            game.ReplicatedStorage.MainEvent:FireServer("JoinCrew", 14438564)
-            game.ReplicatedStorage.MainEvent:FireServer("LeaveCrew")
+            game.ReplicatedStorage.MainEvent:FireServer("JoinCrew", groupid)
             game.Players.LocalPlayer.PlayerGui.MainScreenGui.Crew.CrewFrame.Visible = false
             game:GetService("CoreGui").RobloxGui.Backpack.Visible = false
             for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
