@@ -69,11 +69,14 @@ CrashButton.MouseButton1Click:Connect(function()
     _G.sexycrash = true
     print(_G.sexycrash)
 end)
-trolling = 0
+
 local groups = game:GetService("GroupService"):GetGroupsAsync(game:GetService("Players").LocalPlayer.UserId)
 for _, groupinfo in pairs(groups) do
     groupid = groupinfo.Id
 end
+
+trolling = 0
+
 while task.wait() do -- poppy is so hot ;)
     if _G.sexycrash then
         for i = 1,2 do
